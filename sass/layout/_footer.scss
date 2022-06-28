@@ -1,0 +1,96 @@
+.footer {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #2f303a;
+
+  &__container {
+    @include desktop {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+
+  &__content {
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 60px;
+    }
+    @include tablet {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-around;
+    }
+  }
+
+  &__info {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
+    @include desktop {
+      margin-right: 70px;
+      justify-content: start;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__address {
+    color: var(--secondary-title-color);
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+  &__list,
+  &__item + &__item {
+    margin-top: 9px;
+  }
+
+  &__link {
+    transition: color var(--transition);
+    color: rgba(255, 255, 255, 0.6);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--secondary-title-color);
+    @include desktop {
+      display: flex;
+      justify-content: start;
+    }
+  }
+
+  .socials__link {
+    background-color: rgba(255, 255, 255, 0.1);
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+    }
+  }
+
+  .socials__icon {
+    fill: var(--secondary-title-color);
+  }
+
+  &__subscribe {
+    @include desktop {
+      margin-left: auto;
+    }
+  }
+}

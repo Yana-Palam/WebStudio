@@ -1,0 +1,69 @@
+.modal {
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  transition: transform var(--transition);
+
+  position: absolute;
+  top: 10px;
+  padding: 40px;
+  max-height: 100%;
+  overflow: auto;
+
+  background-color: #fff;
+  border-radius: 4px;
+  @include mobile {
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 450px;
+    width: 100%;
+  }
+  @include tablet {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @include desktop {
+    max-width: 528px;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    color: #000000;
+  }
+
+  &__icon {
+    transition: fill var(--transition);
+    fill: currentColor;
+
+    .modal__btn:hover &,
+    .modal-btn:focus & {
+      fill: var(--accent-color);
+    }
+  }
+
+  &__header {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+    @include desktop {
+      line-height: 1.17;
+    }
+  }
+}

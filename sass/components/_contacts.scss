@@ -1,0 +1,48 @@
+.contacts {
+  @include desktop {
+    display: flex;
+    gap: 50px;
+    margin-left: auto;
+  }
+
+  &__item:not(:last-child) {
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+    @include desktop {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+    transition: color var(--transition);
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+  &__icon {
+    fill: currentColor;
+    margin-right: 10px;
+
+    .contacts__link:hover &,
+    .contacts__link:focus & {
+      fill: currentColor;
+    }
+  }
+}
+.contacts--left {
+  margin-left: auto;
+}

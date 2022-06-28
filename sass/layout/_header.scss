@@ -1,0 +1,25 @@
+.header {
+  border-bottom: 1px solid #ececec;
+  position: relative;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    @media screen and (max-width: 767px) {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    @include desktop {
+      margin-right: 93px;
+    }
+  }
+
+  .btn-menu-open {
+    @include tablet {
+      display: none;
+    }
+  }
+}

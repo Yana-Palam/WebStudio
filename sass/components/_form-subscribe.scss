@@ -1,0 +1,55 @@
+.form-subscribe {
+  &__wrapper {
+    display: flex;
+    @media screen and (max-width: 1199px) {
+      flex-direction: column;
+    }
+  }
+
+  &__input {
+    padding: 15px;
+
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: transparent;
+    outline: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    @media screen and (max-width: 1199px) {
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 20px;
+    }
+
+    @include tablet {
+      max-width: 450px;
+    }
+    @include desktop {
+      margin-right: 12px;
+      width: 358px;
+    }
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.25;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+  &__btn {
+    max-width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &__icon {
+    margin-left: 10px;
+    fill: currentColor;
+  }
+}
