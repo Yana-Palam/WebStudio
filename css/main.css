@@ -256,8 +256,6 @@ body {
   line-height: 1.71;
   color: var(--primary-text-color);
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
 }
 @media screen and (min-width: 1200px) {
   .form__check-lable {
@@ -280,7 +278,7 @@ body {
 }
 .form__check-input:checked + .form__check-lable .form__custom-check {
   background-color: var(--accent-color);
-  border: none;
+  border-color: var(--accent-color);
 }
 .form__link {
   color: var(--accent-color);
@@ -355,6 +353,10 @@ body {
   .modal__header {
     line-height: 1.17;
   }
+}
+
+.text-privacy {
+  display: inline-block;
 }
 
 .socials {
@@ -679,6 +681,12 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   transform: rotate(90deg);
 }
+@media screen and (max-width: 420px) {
+  .mob-socials__item:not(:last-child)::after {
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+}
 
 .mob-socials__link {
   font-weight: 500;
@@ -686,6 +694,11 @@ body {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+}
+@media screen and (max-width: 420px) {
+  .mob-socials__link {
+    font-size: 12px;
+  }
 }
 
 .clients {
@@ -945,7 +958,7 @@ body {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_1200px@2X.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_1200px@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1026,7 +1039,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .projects__item {
-    --card-item: 4;
+    --card-item: 3;
   }
 }
 .projects__link {
@@ -1058,6 +1071,11 @@ body {
   letter-spacing: 0.03em;
   color: var(--secondary-title-color);
   background-color: rgba(33, 150, 243, 0.9);
+}
+@media screen and (max-width: 480px) {
+  .projects__overlay-text {
+    font-size: 14px;
+  }
 }
 .projects__link:hover .projects__overlay-text, .projects__link:focus .projects__overlay-text {
   transform: translateY(0);

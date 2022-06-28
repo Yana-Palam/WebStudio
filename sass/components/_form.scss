@@ -93,9 +93,9 @@
     line-height: 1.71;
     color: var(--primary-text-color);
     display: flex;
-    align-items: center;
+    // align-items: center;
     // flex-grow: 1;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     // position: relative;
     @include desktop {
       font-size: 14px;
@@ -119,7 +119,7 @@
 
     .form__check-input:checked + .form__check-lable & {
       background-color: var(--accent-color);
-      border: none;
+      border-color: var(--accent-color);
     }
   }
 

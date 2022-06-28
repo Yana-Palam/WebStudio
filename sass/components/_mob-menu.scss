@@ -113,6 +113,10 @@
 
 .mob-socials__item:not(:last-child)::after {
   content: "";
+  @media screen and (max-width: 420px) {
+    margin-left: 7px;
+    margin-right: 7px;
+  }
   margin-left: 10px;
   margin-right: 10px;
   width: 22px;
@@ -122,6 +126,9 @@
 }
 
 .mob-socials__link {
+  @media screen and (max-width: 420px) {
+    font-size: 12px;
+  }
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
